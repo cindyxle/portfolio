@@ -1,44 +1,97 @@
-/* Styles for Personal Portfolio Website */
-
-body {
-    font-family: Arial, sans-serif;
+/* RESET */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    gap: 5px;
+    padding-top: 80px;
 }
 
-header {
-    background: #35424a;
-    color: #ffffff;
-    padding: 10px 0;
-    text-align: center;
-}
-
-nav {
-    margin: 20px 0;
-}
-
-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    padding: 10px 20px;
-}
-
-section {
-    padding: 20px;
-    margin: 10px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.footer {
-    text-align: center;
-    padding: 15px;
-    background: #35424a;
-    color: white;
-    position: relative;
-    bottom: 0;
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    margin-left: 25px;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: gray;
+}
+
+/* MAIN SECTION */
+.main-section {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* 👈 controls spacing between photo + about */
+    max-width: 900px;
+}
+
+/* PHOTO */
+.photo img {
+    width: 240px;      /* slightly smaller for tighter spacing */
+    height: 240px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* ABOUT */
+.about {
+    max-width: 450px;
+}
+
+.name {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 5px; /* reduced spacing */
+}
+
+.subtitle {
+    font-size: 16px;
+    color: gray;
+    margin-bottom: 10px; /* reduced spacing */
+}
+
+.about p {
+    line-height: 1.5;
+    color: #444;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
 }
